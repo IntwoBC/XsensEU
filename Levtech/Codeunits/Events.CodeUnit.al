@@ -613,4 +613,28 @@ codeunit 50101 "Events"
         end;
         exit(DimMgmt.GetDimensionSetID(TempDimSetEntry));
     end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post (Yes/No)", 'OnBeforeConfirmPost', '', false, false)]
+    local procedure OnBeforeConfirmPost(var SalesHeader: Record "Sales Header"; var DefaultOption: Integer; var Result: Boolean; var IsHandled: Boolean);
+    begin
+        if SalesHeader."Document Type" IN [SalesHeader."Document Type"::Order, SalesHeader."Document Type"::Invoice] then begin
+            if SalesHeader."Posting Date" <> WorkDate() then begin
+                if not confirm('The Given Posting Date is different from the Default Work Date. Do you want to Continue?', false) then
+                    Error('Please change the posting date');
+            end;
+        end
+
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post (Yes/No)", 'OnBeforeConfirmPost', '', false, false)]
+    local procedure OnBeforeConfirmPost1(var PurchaseHeader: Record "Purchase Header"; var HideDialog: Boolean; var IsHandled: Boolean; var DefaultOption: Integer);
+    begin
+        if PurchaseHeader."Document Type" IN [PurchaseHeader."Document Type"::Order, PurchaseHeader."Document Type"::Invoice] then begin
+            if PurchaseHeader."Posting Date" <> WorkDate() then begin
+                if not confirm('The Given Posting Date is different from the Default Work Date. Do you want to Continue?', false) then
+                    Error('Please change the posting date');
+            end;
+        end
+    end;
+
 }
