@@ -623,7 +623,6 @@ codeunit 50101 "Events"
                     Error('Please change the posting date');
             end;
         end
-
     end;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post (Yes/No)", 'OnBeforeConfirmPost', '', false, false)]

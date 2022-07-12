@@ -2,9 +2,9 @@ report 50023 "Consolidated Trial Balance 4"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'Levtech\Reports\ConsolidatedTrialBalance4custom.rdl';
-    ApplicationArea = Suite;
+    //ApplicationArea = Suite;
     Caption = 'Consolidated Trial Balance (4) IT';
-    UsageCategory = ReportsAndAnalysis;
+    //UsageCategory = ReportsAndAnalysis;
     ProcessingOnly = true;
 
     dataset

@@ -2,9 +2,9 @@ report 50022 "Consolidation TB 4"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'Levtech\Reports\ConsolidatedTrialBalance4.rdl';
-    //ApplicationArea = All;
+    ApplicationArea = All;
     Caption = 'Consolidation TB (4)';
-    //UsageCategory = ReportsAndAnalysis;
+    UsageCategory = ReportsAndAnalysis;
 
     dataset
     {
