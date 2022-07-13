@@ -1,14 +1,11 @@
 query 50004 SalesOrders
 {
-    Caption = 'SalesOrders';
-    QueryType = Normal;
-
 
     elements
     {
         dataitem(Sales_Header; "Sales Header")
         {
-            DataItemTableFilter = "Document Type" = const(Order);
+            DataItemTableFilter = "Document Type" = FILTER(Order);
             column(Document_Type; "Document Type")
             {
 
@@ -63,33 +60,18 @@ query 50004 SalesOrders
             column(Application; Application)
             {
             }
-            column(Applicationarea; "Application area")
+            column("Applicationarea"; "Application area")
             {
             }
-            column(AppliestoDocNo; "Applies-to Doc. No.")
-            {
-            }
-            column(AppliestoDocType; "Applies-to Doc. Type")
-            {
-            }
-            column(AppliestoID; "Applies-to ID")
-            {
-            }
-            column(Archiveoption; "Archive option")
-            {
-            }
+
+
             column("Area_Hdr"; "Area")
             {
             }
             column(AssignedUserID; "Assigned User ID")
             {
             }
-            column(BalAccountNo; "Bal. Account No.")
-            {
-            }
-            column(BalAccountType; "Bal. Account Type")
-            {
-            }
+
             column(BankAccountCode; "Bank Account Code")
             {
             }
@@ -168,13 +150,7 @@ query 50004 SalesOrders
             column(Correction; Correction)
             {
             }
-            column(CreatedByRapidi; "Created By Rapidi")
-            {
-            }
             column(CurrencyCode_Hdr; "Currency Code")
-            {
-            }
-            column(CurrencyCodeIT; "Currency Code IT")
             {
             }
             column(CurrencyFactor; "Currency Factor")
@@ -192,18 +168,7 @@ query 50004 SalesOrders
             column(DimensionSetID_Hdr; "Dimension Set ID")
             {
             }
-            column(DirectDebitMandateID; "Direct Debit Mandate ID")
-            {
-            }
-            column(DocNoOccurrence; "Doc. No. Occurrence")
-            {
-            }
-            column(EU3PartyTrade; "EU 3-Party Trade")
-            {
-            }
-            column(ExitPoint_Hdr; "Exit Point")
-            {
-            }
+
             column(ExternalDocumentNo; "External Document No.")
             {
             }
@@ -231,12 +196,6 @@ query 50004 SalesOrders
             column(ICStatus; "IC Status")
             {
             }
-            column(IncomingDocumentEntryNo; "Incoming Document Entry No.")
-            {
-            }
-            column(Invoice; Invoice)
-            {
-            }
             column(InvoiceDiscCode; "Invoice Disc. Code")
             {
             }
@@ -249,78 +208,7 @@ query 50004 SalesOrders
             column(InvoiceDiscountValue; "Invoice Discount Value")
             {
             }
-            column(IsTest; IsTest)
-            {
-            }
-            column(JobQueueEntryID; "Job Queue Entry ID")
-            {
-            }
-            column(JobQueueStatus; "Job Queue Status")
-            {
-            }
-            column(JournalTemplName; "Journal Templ. Name")
-            {
-            }
-            column(LanguageCode; "Language Code")
-            {
-            }
-            column(LastEmailNotifCleared; "Last Email Notif Cleared")
-            {
-            }
-            column(LastEmailSentStatus; "Last Email Sent Status")
-            {
-            }
-            column(LastEmailSentTime; "Last Email Sent Time")
-            {
-            }
-            column(LastPostingNo; "Last Posting No.")
-            {
-            }
-            column(LastPrepaymentNo; "Last Prepayment No.")
-            {
-            }
-            column(LastPrepmtCrMemoNo; "Last Prepmt. Cr. Memo No.")
-            {
-            }
-            column(LastReturnReceiptNo; "Last Return Receipt No.")
-            {
-            }
-            column(LastShipmentDate; "Last Shipment Date")
-            {
-            }
-            column(LastShippingNo; "Last Shipping No.")
-            {
-            }
-            column(LateOrderShipping; "Late Order Shipping")
-            {
-            }
-            column(LocationCode_Hdr; "Location Code")
-            {
-            }
-            column(NoofArchivedVersions; "No. of Archived Versions")
-            {
-            }
-            column(NoPrinted; "No. Printed")
-            {
-            }
-            column(NoSeries; "No. Series")
-            {
-            }
-            column(OnHold; "On Hold")
-            {
-            }
-            column(OpportunityNo; "Opportunity No.")
-            {
-            }
-            column(OrderClass; "Order Class")
-            {
-            }
-            column(OutboundWhseHandlingTime_Hdr; "Outbound Whse. Handling Time")
-            {
-            }
-            column(PackageTrackingNo; "Package Tracking No.")
-            {
-            }
+
             column(PaymentDiscount; "Payment Discount %")
             {
             }
@@ -363,84 +251,21 @@ query 50004 SalesOrders
             column(PrepaymentNo; "Prepayment No.")
             {
             }
-            column(PrepaymentNoSeries; "Prepayment No. Series")
-            {
-            }
-            column(PrepmtCrMemoNo; "Prepmt. Cr. Memo No.")
-            {
-            }
-            column(PrepmtCrMemoNoSeries; "Prepmt. Cr. Memo No. Series")
-            {
-            }
-            column(PrepmtPaymentDiscount; "Prepmt. Payment Discount %")
-            {
-            }
-            column(PrepmtPaymentTermsCode; "Prepmt. Payment Terms Code")
-            {
-            }
-            column(PrepmtPmtDiscountDate; "Prepmt. Pmt. Discount Date")
-            {
-            }
-            column(PrepmtPostingDescription; "Prepmt. Posting Description")
-            {
-            }
-            column(PriceCalculationMethod_Hdr; "Price Calculation Method")
-            {
-            }
-            column(PricesIncludingVAT; "Prices Including VAT")
-            {
-            }
-            column(PrintPostedDocuments; "Print Posted Documents")
-            {
-            }
-            column(PromisedDeliveryDate_Hdr; "Promised Delivery Date")
-            {
-            }
-            column(QuoteAccepted; "Quote Accepted")
-            {
-            }
-            column(QuoteAcceptedDate; "Quote Accepted Date")
-            {
-            }
-            column(QuoteNo; "Quote No.")
-            {
-            }
-            column(QuoteSenttoCustomer; "Quote Sent to Customer")
-            {
-            }
-            column(QuoteValidUntilDate; "Quote Valid Until Date")
-            {
-            }
-            column(RapidiFieldsUpdated; "Rapidi Fields Updated")
-            {
-            }
-            column(ReadytoShip; "Ready to Ship")
-            {
-            }
+
             column(ReasonCode; "Reason Code")
             {
             }
             column(RecalculateInvoiceDisc_Hdr; "Recalculate Invoice Disc.")
             {
             }
-            column(Receive; Receive)
-            {
-            }
+
             column(RequestedDeliveryDate_Hdr; "Requested Delivery Date")
-            {
-            }
-            column(Reserve_Hdr; Reserve)
             {
             }
             column(ResponsibilityCenter_Hdr; "Responsibility Center")
             {
             }
-            column(ReturnReceiptNo_Hdr; "Return Receipt No.")
-            {
-            }
-            column(ReturnReceiptNoSeries; "Return Receipt No. Series")
-            {
-            }
+
             column(SalesDate; "Sales Date")
             {
             }
@@ -528,22 +353,14 @@ query 50004 SalesOrders
             column(SentasEmail; "Sent as Email")
             {
             }
-            column(Ship; Ship)
-            {
-            }
             column(ShipmentDate_Hdr; "Shipment Date")
             {
             }
-            column(ShipmentDateIT; "Shipment Date IT")
-            {
-            }
+
             column(ShipmentMethodCode; "Shipment Method Code")
             {
             }
             column(ShipmentMethodDescription; "Shipment Method Description")
-            {
-            }
-            column(Shipped; Shipped)
             {
             }
             column(ShippedNotInvoiced_Hdr; "Shipped Not Invoiced")
@@ -559,9 +376,6 @@ query 50004 SalesOrders
             {
             }
             column(ShippingNo; "Shipping No.")
-            {
-            }
-            column(ShippingNoSeries; "Shipping No. Series")
             {
             }
             column(ShippingTime_Hdr; "Shipping Time")
@@ -652,9 +466,6 @@ query 50004 SalesOrders
             column(VATRegistrationNo; "VAT Registration No.")
             {
             }
-            column(WorkDescription; "Work Description")
-            {
-            }
             column(Document_Date; "Document Date")
             {
             }
@@ -663,8 +474,8 @@ query 50004 SalesOrders
             }
             dataitem(Sales_Line; "Sales Line")
             {
-                DataItemLink = "Document No." = Sales_Header."No.";
-                DataItemTableFilter = "Document Type" = const(Order);
+                DataItemLink = "Document No." = Sales_Header."No.", "Document Type" = Sales_header."Document Type";
+
                 column(Document_No; "Document No.")
                 {
                 }
